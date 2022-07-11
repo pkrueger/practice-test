@@ -1,1 +1,12 @@
 /* YOUR STYLES HERE */
+#codeworks-logo {
+    height: 250px;
+}
+
+.myName {
+    color: #ffdb6d;
+    text-align: center;
+    border: 3px solid #ffdb6d;
+    padding: 1rem;
+    background-color: #1d2531;
+}
