@@ -17,48 +17,60 @@ const cases = [
 ]
 
 // YOUR JS CODE 
-let currentYear = 2022
-let jsReleaseYear = 1995
-let jsAge = currentYear - jsReleaseYear
-let message = "The current age of Javascript is " + jsAge
+const currentYear = 2022
+const jsReleaseYear = 1995
+let age = currentYear - jsReleaseYear
 
-console.log(message)
+casesFiltered()
 
-if(jsAge >= ageToVote) {
-  console.log("Javascript is old enough to vote")
-} else {
-  console.log("Javascript is not old enough to vote")
+function p(message) {
+    console.log(message)
 }
 
-logBreak()
-
-console.log("Starting")
-for (let i = 0; i < 101; i++) {
-  if(i == 50) {
-    console.log("Halfway")
-  }
-  console.log(i)
+function jsAge() {
+  p(age)
 }
-console.log("Finished")
 
-logBreak()
-
-console.log(`${user.name} lives at ${user.address.street}, ${user.address.city}`)
-
-logBreak()
-
-cases.forEach(story => {
-  console.log(story.title + " " + story.releaseYear)
-})
-
-logBreak()
-
-cases.forEach(story => {
-  if(story.releaseYear == 1903) {
-    console.log(story.title)
+function jsVote() {
+  if(age > ageToVote) {
+    p("JavaScript is old enough to vote")
+  } else {
+    p("JavaScript is not old enough to vote")
   }
-})
+}
 
-function logBreak() {
-  console.log(" ")
+function countingUp() {
+  for(let i = 0; i < 101; i++) {
+    if(i == 0) {
+      p('Starting')
+    }
+
+    if(i == 50) {
+      p('Halfway')
+    }
+    
+    p(i)
+
+    if(i == 100) {
+      p('Finished')
+    }
+  }
+}
+
+function userAddress() {
+  p(`${user.name} lives at ${user.address.street}, ${user.address.city}`)
+}
+
+function casesList() {
+  for(item of cases) {
+    p(`${item.title} ${item.releaseYear}`)
+  }
+}
+
+function casesFiltered() {
+  for(item of cases) {
+    if(item.releaseYear == 1903) {
+      p(item.title)
+    }
+  }
 }
